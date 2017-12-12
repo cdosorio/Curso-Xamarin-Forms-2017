@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinHelloWorld.QuotesPage"
+             Padding="20">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0"
+            Android="20,30,20,20">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout BindingContext="{x:Reference slider1}" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="Aquamarine">
+        <Button x:Name="btnNext" Text="Next" Clicked="btnNext_Clicked"></Button>
+
+        <Label Text="{ Binding Value, StringFormat='Vaue is {0:F0}' }">
+        </Label>
+
+        <Slider x:Name="slider1" ValueChanged="slider1_ValueChanged" HorizontalOptions="FillAndExpand" BackgroundColor="BlanchedAlmond"  Maximum="50" Minimum="16"/>
+
+        <Label x:Name="lblQuote">
+        </Label>
+    </StackLayout>
+
+</ContentPage>

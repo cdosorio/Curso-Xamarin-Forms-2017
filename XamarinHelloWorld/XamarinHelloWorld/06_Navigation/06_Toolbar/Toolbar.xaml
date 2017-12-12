@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinHelloWorld._06_Navigation.Toolbar"
+             Title="Contacts">
+    <ContentPage.ToolbarItems>
+        <!--Solo aparecen en una navigation bar, por eso se requiere cast a NavigationPage-->
+        <ToolbarItem Icon="plus.png" Text="New 1" Activated="ToolbarItem_Activated" Order="Primary"/>
+        <ToolbarItem Icon="plus.png" Text="New 2" Activated="ToolbarItem_Activated" Order="Secondary"/>
+        
+    </ContentPage.ToolbarItems>
+</ContentPage>

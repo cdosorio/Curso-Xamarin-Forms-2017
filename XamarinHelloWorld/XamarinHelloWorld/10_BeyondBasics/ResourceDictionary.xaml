@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinHelloWorld._10_BeyondBasics.ResourceDictionary">
+    <!--Sobrescriben a los definidos a nivel de App-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Int32 x:Key="borderRadius">20</x:Int32>
+            <Color x:Key="buttonBackgroundColor">Green</Color>
+            <!--Si dejas solo el TargetType, queda como estilo por defecto, y no es necesario indicarlo en cada boton.
+            La desventaja es que no se puede crear estilos que hereden con BasedOn-->
+            <Style x:Key="boton" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource buttonBackgroundColor}"/>
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="BorderRadius" Value="{StaticResource borderRadius}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+            
+            <Style x:Key="botonPrimario" TargetType="Button" BasedOn="{StaticResource boton}">
+                <Setter Property="BackgroundColor" Value="Pink"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout Spacing="20" VerticalOptions="Center">
+        <Button Text="Login" Style="{StaticResource botonPrimario}"/>
+
+        <Button Text="Register" Style="{StaticResource boton}"/>
+			
+        <Button Text="Change style" Clicked="Button_Clicked"></Button>
+    </StackLayout>
+</ContentPage>

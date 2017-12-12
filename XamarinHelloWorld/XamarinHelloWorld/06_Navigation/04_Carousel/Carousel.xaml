@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinHelloWorld._06_Navigation.Carousel">
+    
+    <ContentPage>
+        <StackLayout>
+            <Label Text="Content of page 1" />
+        </StackLayout>
+    </ContentPage>
+    
+    <ContentPage>
+        <Label Text="Content of page 2" HorizontalOptions="Center" VerticalOptions="Center" />
+    </ContentPage>
+    
+</CarouselPage>

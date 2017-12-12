@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinHelloWorld._07_Forms.Slider">
+    <StackLayout>
+        <Slider x:Name="_slider"  Maximum="255" Minimum="10" Value="10" ValueChanged="_slider_ValueChanged"/>
+        <Label Text="{Binding Source={x:Reference _slider}, Path=Value, StringFormat='{0:N0}'}" />
+    </StackLayout>
+</ContentPage>

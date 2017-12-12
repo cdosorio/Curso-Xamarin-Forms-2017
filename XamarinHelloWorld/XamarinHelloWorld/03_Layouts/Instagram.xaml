@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinHelloWorld._03_Layouts.Instagram">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+            iOS="0,20,0,0"
+            Android="0,0,0,0">
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <StackLayout>
+        <StackLayout Padding="10">
+            <Label Text="nyc_photographer" />
+        </StackLayout>
+        <Image Source="https://xamarin.com/content/images/pages/forms/example-app.png"></Image>
+
+        <StackLayout Orientation="Horizontal" Spacing="20" Padding="10, 0">
+            <Button Text="Like" HorizontalOptions="Start"></Button>
+            <Button Text="Comment" HorizontalOptions="Start"></Button>
+            <Button Text="Share" HorizontalOptions="Start"></Button>
+        </StackLayout>
+        <StackLayout Padding="20">
+            <BoxView Color="#f0f0f0" HeightRequest="1"></BoxView>
+
+            <Label Text="800 ikes" FontAttributes="Bold" />
+
+            <Label Text=" To
+implement this, you can have a parent
+StackLayout that fills the page
+horizontally, and a nested StackLayout
+with some padding."></Label>
+
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
